@@ -1,22 +1,23 @@
 import React from 'react';
 
 import './../styles/card.css';
+
 interface CardProps {
-  title?: string;
-  description?: string;
-  imageUrl?: string;
-  btnText?: string;
+  name: string;
+  description: string;
+  price: number;
+  imageUrl: string;
 }
 
-const Card: React.FC<CardProps> = ({ title, description, imageUrl, btnText }) => {
+const Card: React.FC<CardProps> = ({ name, description, price, imageUrl }) => {
   return (
-    <div className="card">
-      {imageUrl ? <img className="card-image" src={imageUrl} alt={title} /> : null}
-
-      <div className="card-content">
-        {title ? <h2 className="card-title">{title}</h2> : null}
-        {description ? <p className="card-description">{description}</p> : null}
-        {btnText ? <button className="card-btn">{btnText}</button> : null}
+    <div className="product-card">
+      <img className="product-image" src={imageUrl} alt={name} />
+      <div className="product-details">
+        <h2 className="product-name">{name}</h2>
+        <p className="product-description">{description}</p>
+        <p className="product-price">${price.toFixed(2)}</p>
+        <button className="add-to-cart-button">Add to Cart</button>
       </div>
     </div>
   );

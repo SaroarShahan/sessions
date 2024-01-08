@@ -4,10 +4,10 @@ function App() {
   return (
     <div>
       <Card
-        title="Example Card"
-        description="This is a sample card component built with React, TypeScript, and Tailwind CSS."
+        name="Product 1"
+        description="Description for Product 1"
+        price={19.99}
         imageUrl="https://via.placeholder.com/300"
-        btnText="Read more..."
       />
     </div>
   );

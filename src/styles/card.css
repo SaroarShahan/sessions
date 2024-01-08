@@ -1,45 +1,55 @@
-.card {
-  max-width: 20rem;
-  border: 1px solid #e2e8f0;
-  border-radius: 0.375rem;
+/* src/components/ProductCard.css */
+.product-card {
+  max-width: 300px;
+  border: 1px solid #ddd;
   overflow: hidden;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin: 1rem;
+  margin: 16px;
+  transition: transform 0.3s ease-in-out;
 }
 
-.card-image {
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+.product-image {
   width: 100%;
-  height: auto;
+  height: 200px;
+  object-fit: cover;
 }
 
-.card-content {
-  padding: 1rem;
+.product-details {
+  padding: 16px;
 }
 
-.card-title {
+.product-name {
+  font-size: 1.5rem;
   font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.product-description {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.product-price {
   font-size: 1.25rem;
-  margin-bottom: 0.5rem;
+  font-weight: bold;
+  margin-bottom: 8px;
 }
 
-.card-description {
-  color: #4a5568;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.card-btn {
-  background-color: #4299e1;
-  color: #fff;
-  padding: 0.5rem;
-  border: none;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  transition: background-color 0.3s;
+.add-to-cart-button {
   width: 100%;
+  background-color: #007bff;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
 }
 
-.card-btn:hover {
-  background-color: #2c5282;
+.add-to-cart-button:hover {
+  background-color: #0056b3;
 }
